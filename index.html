@@ -1,4 +1,6 @@
-<meta http-equiv="Refresh" content="0; url='http://81.135.68.97/'" />
+//<meta http-equiv="Refresh" content="0; url='http://81.135.68.97/'" />
 <script>
-window.location = "http://81.135.68.97";
+if (window.location.href.indexOf('http://niko.github.com') === 0) {
+    window.location.href = 'http://casperjs.org{{ page.url }}';
+}
 </script>
