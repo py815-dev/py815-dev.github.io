@@ -1,118 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=2">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<script src="https://unpkg.com/feather-icons"></script>
 <head>
-<title>Delta - a multipurpose Discord bot</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Delta is the only bot your server will ever need. Whether it's music or Among Us within Discord, we've got you covered, no premium or hidden payments.">
-<meta name="keywords" content="discord bot delta dashboard music among us"/>
-<meta name="og:image" itemprop="image" content='https://cdn.discordapp.com/avatars/753994539492180029/40aac458bccea808590b6a6e323e2a97.webp'></meta>
-<meta name="theme-color" content="#ff0000">
-<meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="/favicon.ico"/>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
-</head>
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.meetdelta {background-image: url(https://i.imgur.com/NJWnlPW.png);background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent;margin-top: 200px;font-size: 120px;text-align: center;font-weight: bold;text-transform: uppercase;font-weight: 800;-webkit-font-smoothing: antialiased;}
+.feather-large{
+width: 60%;
+height: 60%;
+}
 </style>
-<body class="w3-black">
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://i.imgur.com/heGD898.png">
+    </a>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="https://i.imgur.com/3AMkvJx.png" style="width:100%" alt="home">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>Home</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-info w3-xxlarge"></i>
-    <p>About</p>
-  </a>
-
-  <a href="#developers" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-cog w3-xxlarge"></i>
-    <p>Developers</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">About</a>
-    <a href="#developers" class="w3-bar-item w3-button" style="width:25% !important">Developers</a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-</div>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <div class="w3-container">
-    <span class="w3-hide-large"><span class="w3-hide-medium"><h1 class="w3-jumbo meetdelta">Meet Delta</h1></span></span>
-    <span class="w3-hide-small"><h1 class="w3-xxl meetdelta">Meet Delta</h1></span>
-    <p>User-friendly Discord bot.</p>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href='/'>
+        Home
+      </a>
+
+      <a class="navbar-item" href='/invite'>
+        Invite
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href='/'>
+            About
+          </a>
+        </div>
+      </div>
     </div>
-  </header>
-  <br>
-  <div class="w3-container w3-center">
-  	<img src="https://i.imgur.com/okwf7rm.png" alt="Using Delta" class="w3-image" width="992" height="1108" style="text-align:center;">
-  </div>
-  <br>
-  <br>
-  <div align="center">
-  	<a class="w3-button w3-blue w3-round-xxlarge" href="https://discordapp.com/oauth2/authorize?client_id=753994539492180029&scope=bot&permissions=536337478">Invite Delta</a>
-    <br>
-    <br>
-    <a class="w3-button w3-blue w3-round-xxlarge" href="/login">Login (Beta)</a>
-  </div>
 
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">Why Delta?</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Delta is an easy-to-use bot that aims to be as useful and fun as possible. It has a <a href="/login">dashboard</a> and provides reddit commands and music commands that would be 'premium' on other bots.
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-danger">
+            <strong>Log In</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<head>
+<body>
+<section class="hero is-danger">
+  <div class="hero-body columns">
+    <div class='column is-one-third'>
+      <img src='https://i.imgur.com/DG3VJOU.png'></img>
+    </div>
+    <div class='column'>
+      <p class="title">
+        Meet Delta.
+      </p>
+      <br>
+      <p class="subtitle">
+        An open-source music bot designed for you, not for money.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body columns">
+    <div class='column'>
+    <p class="title">
+      Secure.
     </p>
-
-
-
-    <!-- developers -->
-    <div id="developers">
-      <h3 class="w3-padding-24 w3-text-light-grey">Developers</h3>  
-      <img src="https://cdn.discordapp.com/avatars/753299189210808430/a_3c31b45c2961131d0ffac7ced6a9f64d.png?size=256" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <b><span class="w3-large w3-margin-right">ddb08</span></b>
-      <p>Main developer</p>
+    <br>
+    <p class="subtitle">
+      Delta is open source, meaning that you can view the code and see how we're using your data, and if you like, make your own version of the bot.<a href='https://github.com/py815-dev/Delta'>
       <br>
       <br>
-
-      <img src="https://cdn.discordapp.com/avatars/535576331778260992/83f03655add38606688a5598ca3ea7d6.webp?size=256" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <b><span class="w3-large w3-margin-right">Novaaa</span></b>
-      <p>Helps with all the github stuff and generally advises me.</p>
+    <button class="button is-danger">Code Here</button>
+    </a>
+    </p>
+    </div>
+    <div class='column is-one-third'>
+     <i data-feather="lock" class='is-right feather-large'></i>
+    </div>
   </div>
-
-
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-github w3-hover-opacity"></i>
-    <i class="fa fa-discord w3-hover-opacity" aria-hidden="true"></i>
-    <p class="w3-medium">Support server: <a href="https://discord.gg/z5q74YWAZg" target="_blank" class="w3-hover-text-green">here</a></p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
+</section>
+<section class="hero is-dark">
+  <div class="hero-body columns">
+    <div class='column is-one-third'>
+     <i data-feather="more-horizontal" class='is-right feather-large'></i>
+    </div>
+    <div class='column is-right'>
+    <p class="title">
+      Easy to use.
+    </p>
+    <br>
+    <p class="subtitle">
+      Delta provides a dashboard to control your music with ease, no more remembering complicated syntax for commands.
+    </p>
+    <a href='/login'>
+    <button class="button is-danger">Dashboard</button>
+    </a>
+    </div>
+    </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body columns">
+    <div class='column'>
+    <p class="title">
+      Upgradeable.
+    </p>
+    <br>
+    <p class="subtitle">
+      Using our simple guide, learn how you can host part of the bot to help contribute to everyone's experience..<a href='/contribute'>
+      <br>
+      <br>
+    <button class="button is-danger">Guide</button>
+    </a>
+    </p>
+    </div>
+    <div class='column is-one-third'>
+     <i data-feather="package" class='is-right feather-large'></i>
+    </div>
+  </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body columns">
+    <div class='column is-one-third'>
+     <i data-feather="dollar-sign" class='is-right feather-large'></i>
+    </div>
+    <div class='column is-right'>
+    <p class="title">
+      Free forever.
+    </p>
+    <br>
+    <p class="subtitle">
+      We never plan to introduce a premium tier to Delta, so you can listen unrestricted.
+    </p>
+    <a href='/login'>
+    <button class="button is-danger">Dashboard</button>
+    </a>
+    </div>
+    </div>
+</section>
 </body>
-</html>
+<footer class="hero is-danger footer">
+    <div class='columns'>
+      <div class='column is-one-quarter'>
+        <p class='subtitle'>Support Delta</p>
+        <a href='https://github.com/py815-dev/Delta'>
+          <span style='display: flex; align-items: center;'>
+          <i data-feather="github"></i>
+          <p>&nbsp;Repository</p>
+          </span>
+        </a>
+        <br>
+        <a href='https://github.com/py815-dev/Delta'>
+          <span style='display: flex; align-items: center;'>
+          <i data-feather="server"></i>
+          <p>&nbsp;Host part of Delta</p>
+          </span>
+        </a>
+      </div>
+      <div class='column is-one-quarter'>
+        <p class='subtitle'>Community</p>
+        <a href='https://discord.gg/TVaRx9sJnP'>
+          <span style='display: flex; align-items: center;'>
+          <i data-feather="message-square"></i>
+          <p>&nbsp;Support server</p>
+          </span>
+        </a>
+      </div>
+      <div class='column is-one-quarter'>
+        <p class='subtitle'>Dashboard</p>
+        <a href='/login'>
+          <span style='display: flex; align-items: center;'>
+          <i data-feather="log-in"></i>
+          <p>&nbsp;Login</p>
+          </span>
+        </a>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    Delta is developed with ❤️ by ddb08#6947.
+</footer>
+<script>
+      feather.replace()
+</script>
+</html> 
