@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    #date {
+        text-align:left;
+        font-size: 45vh;
+        color: black;
+        font-family: "Zurich LtXCn BT";
+    }
+    #hero {
+        position: absolute;
+        right:0%;
+        margin-right: 5%;
+        margin-top:5%;
+        height:90vh
+    }
+    @font-face {
+        font-family: 'Zurich LtXCn BT';
+        src: URL('large-text.ttf') format('truetype');
+    }
+    .container2 {
+        width:75vw;
+        border-bottom: 4px solid black;
+        border-top: 4px solid black;
+    }
+    #subtext {
+        color:black;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #subtext2 {
+        color:black;
+        font-weight:bold;
+        font-stretch: condense;
+        font-size:4vh;
+    }
+</style>
+<body>
+    <section class="hero" id="hero">
+        <div class="container" style="width:100%;display:inline;">
+            <div class="container2">
+                <h1 class="title" id="date">
+                11
+                </h1>
+                <p class="subtitle" id="subtext">
+                    11/31
+                </p>
+            </div>
+            <p class="subtitle" id="subtext2" style="text-align:left;">
+                &#124;
+            </p>
+            <br>
+            <img src="./icons.png" style="width:75vw"></img>
+        </div>
+      </section>
+</body>
+<script>
+const now = new Date();
+function getDaysInMonth(year, month) {
+  return new Date(year, month, 0).getDate();
+}
+const daysInCurrentMonth = getDaysInMonth(now.getFullYear(), now.getMonth());
+if(now.getDate() < 10) {
+    document.getElementById("date").innerText = "0"+now.getDate();
+}
+else {
+    document.getElementById("date").innerText = now.getDate();
+
+}
+document.getElementById("subtext2").innerText = "|".repeat(now.getDate());
+document.getElementById("subtext").innerText = now.getDate()+"/"+daysInCurrentMonth;
+
+
+
+var lastRefresh = new Date(); // If the user just loaded the page you don't want to refresh either
+
+setInterval(function(){
+
+  //first, check time, if it is 9 AM, reload the page
+   var now = new Date();
+   if (now.getHours() == 6 && new Date() - lastRefresh > 1000 * 60 * 60 * 6) { // If it is between 9 and ten AND the last refresh was longer ago than 6 hours refresh the page.
+      location.reload();
+   }
+
+  //do other stuff
+
+},60000);
+</script>
+</html>
